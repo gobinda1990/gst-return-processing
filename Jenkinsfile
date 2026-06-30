@@ -15,9 +15,7 @@ pipeline {
     stages {
        stage('Checkout') {
             steps {
-                git branch: 'stage-gst',
-                    credentialsId: 'gitea-token',
-                    url: 'http://10.153.36.143/gitea/ISD_CTD/isd_common_login.git'
+                git branch: 'main', url: 'https://github.com/gobinda1990/dgst-return-processing.git'
             }
         }
          stage('Build JAR with Maven') {
