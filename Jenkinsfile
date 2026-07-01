@@ -18,6 +18,18 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/gobinda1990/gst-return-processing.git'
             }
         }
+		stage('Setup Oracle Driver') {
+            steps {
+                sh '''
+                  mvn install:install-file \
+                    -Dfile=libs/ojdbc6.jar \
+                    -DgroupId=com.oracle \
+                    -DartifactId=ojdbc6 \
+                    -Dversion=11.2.0.4 \
+                    -Dpackaging=jar
+                '''
+            }
+            }
          stage('Build JAR with Maven') {
             steps {
                 script {
