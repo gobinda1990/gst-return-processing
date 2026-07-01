@@ -14,5 +14,9 @@ public class GstReturn3BResponse {
 	private String gstin;
 	private String retPrd;
 	private String filingDt;
+	private String retType;
+	private String regStDt;
+	private String regStatus;
+	
 
 }
