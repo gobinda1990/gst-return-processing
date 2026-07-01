@@ -15,7 +15,7 @@ pipeline {
     stages {
        stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/gobinda1990/dgst-return-processing.git'
+                git branch: 'main', url: 'https://github.com/gobinda1990/gst-return-processing.git'
             }
         }
          stage('Build JAR with Maven') {
